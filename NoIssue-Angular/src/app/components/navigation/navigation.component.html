@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard">Dashboard</a>
+      <a mat-list-item routerLink="/drag-drop">Drag and Drop</a>
+      <a mat-list-item routerLink="/edit-profile">Edit profile</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>NoIssue-Angular</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-template>
+      <app-dashboard></app-dashboard>
+      <app-drag-drop></app-drag-drop>
+      <app-edit-profile></app-edit-profile>
+    </ng-template>
+  </mat-sidenav-content>
+</mat-sidenav-container>
