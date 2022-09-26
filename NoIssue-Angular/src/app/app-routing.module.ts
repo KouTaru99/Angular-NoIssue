@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { RegisterComponent } from './components/register/register.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'verify-email', component: VerifyEmailComponent },
   { path: 'navigation', component: NavigationComponent },
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'drag-drop', component: DragDropComponent },

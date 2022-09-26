@@ -29,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatCardModule } from '@angular/material/card';
     PageNotFoundComponent,
     NavigationComponent,
     DragDropComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
