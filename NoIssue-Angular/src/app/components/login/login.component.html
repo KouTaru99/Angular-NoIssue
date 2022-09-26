@@ -1,0 +1,34 @@
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: #fff;" href="#">
+      No Issue
+    </a>
+  </div>
+</nav>
+<div class="card">
+  <div class="card-header"><strong>Login</strong></div>
+  <div class="card-body">
+    <form class="form-container">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control shadow-none" id="email" [(ngModel)] = "email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control shadow-none" id="password" [(ngModel)] = "password" name="password">
+      </div>
+
+        <div class="mb-3 d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary" (click)="onLogin()">Submit</button>
+          <div class="link-grourp">
+              <span>You do not have account? <a routerLink="/register">Register now</a></span>
+              <span> | </span>
+              <span><a routerLink="/forgot-password">Forgot password</a></span>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
+
+

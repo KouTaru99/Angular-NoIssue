@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "noissue-angular": {
+      "hosting": {
+        "NoIssue-Angular": [
+          "noissue-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "noissue-angular"
+  }
+}
