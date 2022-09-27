@@ -1,8 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/dashboard">Dashboard</a>
@@ -12,21 +10,20 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>NoIssue-Angular</span>
+      <div class="tool-bar-container d-flex justify-content-between align-items-center">
+        <div class="left d-flex align-items-center">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>NoIssue-Angular</span>
+        </div>
+        <div class="right d-flex gap-3">
+          <i class="fa-regular fa-bell"></i>
+          <i class="fa-regular fa-circle-user"></i>
+        </div>
+      </div>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <ng-template>
-      <app-dashboard></app-dashboard>
-      <app-drag-drop></app-drag-drop>
-      <app-edit-profile></app-edit-profile>
-    </ng-template>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

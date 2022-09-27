@@ -15,3 +15,10 @@
   top: 0;
   z-index: 1;
 }
+
+.tool-bar-container {
+  width: 100%;
+  .right i {
+    cursor: pointer;
+  }
+}

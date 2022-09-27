@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'navigation', component: NavigationComponent },
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'drag-drop', component: DragDropComponent },
-  { path: '', pathMatch: "full", redirectTo: 'login' },
+  { path: '', pathMatch: "full", redirectTo: 'navigation' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -18,7 +18,7 @@ login(email:string, password:string) {
       this.router.navigate(['/navigation']);
     }else{
       this.router.navigate(['/verify-email']);
-
+    this.sendEmailForVerification(res.user);
     }
   },err => {
     alert(err.message);
@@ -28,12 +28,12 @@ login(email:string, password:string) {
 
 //  register method
 
-register(email:string, password:string) {
-  this.fireauth.createUserWithEmailAndPassword(email,password).then((res) => {
-    alert('Register successful!');
-    this.router.navigate(['/login']);
+register(email : string, password : string) {
+  this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
+    alert('Registration Successful');
     this.sendEmailForVerification(res.user);
-  },err => {
+    this.router.navigate(['/login']);
+  }, err => {
     alert(err.message);
     this.router.navigate(['/register']);
   })
@@ -63,21 +63,14 @@ logout() {
 
   //  email verification
 
-  sendEmailForVerification(user:any) {
-  user.sendEmailVerification.then((res:any)=> {
-    this.router.navigate(['/verify-email']);
-  },(err:any)=> {
-    alert('Something went wrong, please try again');
-  })
-}
-
-sendEmailForVerification2(user:any) {
-  user.sendEmailVerification.then((res:any)=> {
-    this.router.navigate(['/verify-email']);
-  },(err:any)=> {
-    alert('Something went wrong, please try again');
-  })
-}
+  sendEmailForVerification(user : any) {
+    console.log(user);
+    user.sendEmailVerification().then((res : any) => {
+      this.router.navigate(['/verify-email']);
+    }, (err : any) => {
+      alert('Something went wrong. Not able to send mail to your email.')
+    })
+  }
 
 }
 
