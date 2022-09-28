@@ -30,6 +30,18 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { HomeComponent } from './components/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { ProjectComponent } from './components/project/project.component';
+import { IssueComponent } from './components/issue/issue.component';
+import { ProjectTableComponent } from './components/project/project-table/project-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { EditProjectComponent } from './components/project/edit-project/edit-project.component';
+import { CreateProjectComponent } from './components/project/create-project/create-project.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -42,7 +54,13 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     NavigationComponent,
     DragDropComponent,
     EditProfileComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    HomeComponent,
+    ProjectComponent,
+    IssueComponent,
+    ProjectTableComponent,
+    EditProjectComponent,
+    CreateProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +82,13 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

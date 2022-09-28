@@ -22,3 +22,13 @@
     cursor: pointer;
   }
 }
+.menu-noti, .menu-user {
+  .dropdown a[role="button"]{
+    color: #fff
+  }
+}
+.menu-noti, .menu-user {
+  .dropdown a{
+    cursor: pointer;
+  }
+}
