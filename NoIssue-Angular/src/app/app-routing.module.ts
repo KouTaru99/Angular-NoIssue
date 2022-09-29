@@ -14,26 +14,31 @@ import { ProjectComponent } from './components/project/project.component';
 import { RegisterComponent } from './components/register/register.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
-
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email', component: VerifyEmailComponent },
-  { path: 'navigation', component: NavigationComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
-  { path: 'drag-drop', component: DragDropComponent },
-  { path: 'project', component: ProjectComponent },
-  { path: 'edit-project', component: EditProjectComponent },
-  { path: 'create-project', component: CreateProjectComponent },
-  { path: 'issue', component: IssueComponent },
-  { path: '', pathMatch: "full", redirectTo: 'navigation' },
+  {
+    path: 'navigation',
+    component: NavigationComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'edit-profile', component: EditProfileComponent },
+      { path: 'drag-drop', component: DragDropComponent },
+      { path: 'project', component: ProjectComponent },
+      { path: 'edit-project', component: EditProjectComponent },
+      { path: 'create-project', component: CreateProjectComponent },
+      { path: 'issue', component: IssueComponent },
+    ],
+  },
+
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -3,13 +3,13 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard">Dashboard</a>
-      <a mat-list-item routerLink="/drag-drop">Drag and Drop</a>
-      <a mat-list-item routerLink="/edit-profile">Edit profile</a>
-      <a mat-list-item routerLink="/project">Project</a>
-      <a mat-list-item routerLink="/edit-project">Edit Project</a>
-      <a mat-list-item routerLink="/create-project">Create Project</a>
-      <a mat-list-item routerLink="/issue">Issue</a>
+      <a mat-list-item [routerLink]="['/dashboard']">Dashboard</a>
+      <a mat-list-item [routerLink]="['/drag-drop']">Drag and Drop</a>
+      <a mat-list-item [routerLink]="['/edit-profile']">Edit profile</a>
+      <a mat-list-item [routerLink]="['/project']">Project</a>
+      <a mat-list-item [routerLink]="['/edit-project']">Edit Project</a>
+      <a mat-list-item [routerLink]="['/create-project']">Create Project</a>
+      <a mat-list-item [routerLink]="['/issue']">Issue</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,7 +24,7 @@
         <div class="right d-flex gap-3">
           <div class="menu-noti">
             <div class="dropdown">
-              <a  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <a role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-regular fa-bell"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -35,15 +35,15 @@
             </div>
           </div>
           <div class="menu-user">
-                <div class="dropdown">
-                  <a role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-circle-user"></i>
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item">Profile</a></li>
-                    <li><a class="dropdown-item" (click)="onLogout()">logout</a></li>
-                  </ul>
-                </div>
+            <div class="dropdown">
+              <a role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-regular fa-circle-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item">Profile</a></li>
+                <li><a class="dropdown-item" (click)="onLogout()">logout</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

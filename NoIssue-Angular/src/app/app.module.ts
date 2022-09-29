@@ -42,6 +42,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { EditProjectComponent } from './components/project/edit-project/edit-project.component';
 import { CreateProjectComponent } from './components/project/create-project/create-project.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NavigationModule } from './components/navigation/navigation.module';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NavigationModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
