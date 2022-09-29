@@ -1,9 +1,14 @@
+// modules
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+// components
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DragDropComponent } from './components/drag-drop/drag-drop.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { HomeComponent } from './components/home/home.component';
 import { IssueComponent } from './components/issue/issue.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -22,16 +27,15 @@ const routes: Routes = [
   {
     path: 'navigation',
     component: NavigationComponent,
-    children: [
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'edit-profile', component: EditProfileComponent },
-      { path: 'drag-drop', component: DragDropComponent },
-      { path: 'project', component: ProjectComponent },
-      { path: 'edit-project', component: EditProjectComponent },
-      { path: 'create-project', component: CreateProjectComponent },
-      { path: 'issue', component: IssueComponent },
-    ],
+
   },
+  // { path: 'dashboard', component: DashboardComponent },
+  //     { path: 'edit-profile', component: EditProfileComponent },
+  //     { path: 'drag-drop', component: DragDropComponent },
+  //     { path: 'project', component: ProjectComponent },
+  //     { path: 'edit-project', component: EditProjectComponent },
+  //     { path: 'create-project', component: CreateProjectComponent },
+  //     { path: 'issue', component: IssueComponent },
 
   { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: '**', component: PageNotFoundComponent },
