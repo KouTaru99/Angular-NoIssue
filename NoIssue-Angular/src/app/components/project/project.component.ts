@@ -71,8 +71,16 @@ export class ProjectComponent implements OnInit {
   }
 
 
-  updateProject() {
+  updateProject(project:Project) {
+    this.projectObj.id = '';
+    this.projectObj.name= this.name;
+    this.projectObj.description= this.description;
+    this.projectObj.created_date= this.created_date;
+    this.projectObj.deadline= this.deadline;
+    this.projectObj.status= this.status;
 
+    this.data.updateProject(this.projectObj);
+    console.log(this.projects);
   }
 
   deleteProject(project:Project) {

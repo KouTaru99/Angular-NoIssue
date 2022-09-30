@@ -27,8 +27,10 @@ export class ProjectService {
   }
 
   updateProject(project:Project) {
-    this.deleteProject(project);
-    this.addProject(project)
+    // this.deleteProject(project);
+    // this.addProject(project);
+    this.afs.doc('Project').update(project);
+
   }
 
 }

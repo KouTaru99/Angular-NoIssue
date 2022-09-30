@@ -27,18 +27,21 @@ const routes: Routes = [
   {
     path: 'navigation',
     component: NavigationComponent,
-
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'edit-profile', component: EditProfileComponent },
+      { path: 'drag-drop', component: DragDropComponent },
+      { path: 'project', component: ProjectComponent },
+      { path: 'edit-project/id:', component: EditProjectComponent },
+      { path: 'create-project', component: CreateProjectComponent },
+      { path: 'issue', component: IssueComponent },
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      { path: '**', component: DashboardComponent },
+    ],
   },
-  // { path: 'dashboard', component: DashboardComponent },
-  //     { path: 'edit-profile', component: EditProfileComponent },
-  //     { path: 'drag-drop', component: DragDropComponent },
-  //     { path: 'project', component: ProjectComponent },
-  //     { path: 'edit-project', component: EditProjectComponent },
-  //     { path: 'create-project', component: CreateProjectComponent },
-  //     { path: 'issue', component: IssueComponent },
 
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: '**', component: PageNotFoundComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
 ];
 
 @NgModule({

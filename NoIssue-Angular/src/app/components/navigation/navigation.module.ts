@@ -10,13 +10,13 @@ import { ProjectComponent } from '../project/project.component';
 
 const routes: Routes = [
 
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
-  { path: 'drag-drop', component: DragDropComponent },
-  { path: 'project', component: ProjectComponent },
-  { path: 'edit-project', component: EditProjectComponent },
-  { path: 'create-project', component: CreateProjectComponent },
-  { path: 'issue', component: IssueComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+  // { path: 'edit-profile', component: EditProfileComponent },
+  // { path: 'drag-drop', component: DragDropComponent },
+  // { path: 'project', component: ProjectComponent },
+  // { path: 'edit-project', component: EditProjectComponent },
+  // { path: 'create-project', component: CreateProjectComponent },
+  // { path: 'issue', component: IssueComponent },
 ];
 
 @NgModule({

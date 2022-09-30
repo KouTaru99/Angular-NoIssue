@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/shared/project.service';
 
@@ -22,7 +23,11 @@ export class CreateProjectComponent implements OnInit {
   created_date= ''
   deadline= ''
   status = true
-  constructor(private data:ProjectService) { }
+  acRoute: any;
+  constructor(private data:ProjectService, acRoute:ActivatedRoute) {
+    
+
+   }
 
   ngOnInit(): void {
 

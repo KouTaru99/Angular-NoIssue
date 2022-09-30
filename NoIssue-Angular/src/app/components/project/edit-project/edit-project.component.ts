@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/models/project';
+import { ProjectService } from 'src/app/shared/project.service';
 
 @Component({
   selector: 'app-edit-project',
@@ -7,9 +10,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProjectComponent implements OnInit {
 
-  constructor() { }
+  projectObj:Project = {
+    id: '',
+    name: '',
+    description: '',
+    created_date: '',
+    deadline: '',
+    status: true
+  }
+  id= ''
+  name= ''
+  description= ''
+  created_date= ''
+  deadline= ''
+  status = true
+  constructor(private data:ProjectService, acRoute:ActivatedRoute) {
+
+   }
+
 
   ngOnInit(): void {
+
   }
 
+  onUpdateProject(project:Project) {
+  this.id = project.id
+  console.log(this.id);
+
+  }
+
+
+  resetForm() {
+    this.id= ''
+    this.name= ''
+    this.description= ''
+    this.created_date= ''
+    this.deadline= ''
+    this.status = true
+  }
 }
